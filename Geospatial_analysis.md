@@ -1,4 +1,4 @@
-<p align="center"> <b>Geospatial Software Analysis - An Introduction to Google Earth Engine</b> </p>
+<p align="center"> <b>An Introduction to Geospatial Analysis using the Google Earth Engine Platform</b> </p>
 
 <br><br><br><br><br><br><br><br>
 
