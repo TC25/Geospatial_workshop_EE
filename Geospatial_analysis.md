@@ -5,9 +5,11 @@
 
 <p align="center"> <b>TC Chakraborty</b>   </p>
 
+<p align="center"> <b>PhD candidate</b>   </p>
+
 <p align="center"> <b>Yale School of Forestry & Environmental Studies</b>   </p>
 
-<p align="center"> <b>Yale Data Driven Solutions Group</b>   </p>
+
 
 <br><br><br><br>
 
@@ -19,7 +21,7 @@
 
 ---
 
-<p align="center"> https://github.com/datadrivenyale/day-of-data-2.0 </p>
+<p align="center"> https://github.com/TC25/Geospatial_workshop_EE </p>
 
 ---
 <br><br><br><br><br><br><br>
