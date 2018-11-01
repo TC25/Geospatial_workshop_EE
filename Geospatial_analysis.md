@@ -1,4 +1,4 @@
-<p align="center"> <b>An Introduction to Geospatial Analysis using the Google Earth Engine Platform</b> </p>
+<p align="center"> <b>An Introduction to Geospatial Analysis Using the Google Earth Engine Platform</b> </p>
 
 <br><br><br><br><br><br><br><br>
 
