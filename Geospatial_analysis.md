@@ -81,8 +81,6 @@ Collection, visualization, and analysis of geographical or spatial data.
 
 [Code Editor](https://code.earthengine.google.com/ "Earth Engine Code Editor")
 
-[Code Editor](https://code.earthengine.google.com/){:target="_blank"}
-
 - Cloud-based platform for planetary scale geospatial analysis
 - Uses Google's computational resources to reduce processing time
 - Massive archive of remote sensing data 
