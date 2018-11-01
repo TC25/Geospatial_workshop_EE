@@ -1,0 +1,4 @@
+This workshop provides a fundamental overview of geospatial analysis using the JavaScript API of Earth Engine. We will introduce types of geospatial data, using these data on the Earth Engine platforms, and discuss a host of functionality to visualize and analyze these. We will end the workshop with a mini-hackathon to test some scripts created by Prof. Dana Tomlin for his course, 'Geospatial Software Design'. This will also allow people with no experience in GIS to explore the range of analytical capabilities of this platform. 
+
+
+Participants need to sign up for a Google Earth Engine account before the workshop, which can be done by simply going to this link: https://signup.earthengine.google.com
