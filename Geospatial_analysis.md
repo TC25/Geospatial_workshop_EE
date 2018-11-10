@@ -26,6 +26,17 @@
 ---
 <br><br><br><br><br><br><br>
 
+
+# What can you do with Google Earth Engine?
+
+### [EE Population Explorer](https://code.earthengine.google.com/f5c100f29958f6fe82ba5d0dcf6421a4 "EE Population Explorer")
+
+### [EE Ocean Time Series Investigator](https://code.earthengine.google.com/901e5a356ef3d260a5ff542598667044 "EE Ocean Time Series Investigator")
+
+### [Global Surface UHI Explorer](https://yceo.users.earthengine.app/view/uhimap "Global Surface UHI Explorer")
+
+
+
 # Agenda
 
 ##### Introduction to Geospatial Analysis
@@ -60,19 +71,19 @@ Collection, visualization, and analysis of geographical or spatial data.
 
 - Points
 
-![Points](https://github.com/datadrivenyale/day-of-data-2.0/blob/master/5-Geospatial%20analysis/images/points-vector.png "Points")
+![Points](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/points-vector.png "Points")
 
 - Lines
 
-![Lines](https://github.com/datadrivenyale/day-of-data-2.0/blob/master/5-Geospatial%20analysis/images/line-vector.png "Lines")
+![Lines](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/line-vector.png "Lines")
 
 - Polygons
 
-![Polygons](https://github.com/datadrivenyale/day-of-data-2.0/blob/master/5-Geospatial%20analysis/images/polygon-vector.png "Polygons")
+![Polygons](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/polygon-vector.png "Polygons")
 
 - Raster layers/bands
 
-![Raster](https://github.com/datadrivenyale/day-of-data-2.0/blob/master/5-Geospatial%20analysis/images/Map-Algebra.png "Raster")
+![Raster](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/Map-Algebra.png "Raster")
 
 
 ---
@@ -93,7 +104,7 @@ Source: Google Earth Engine User summit
 
 ---
 
-![Code Editor](https://github.com/datadrivenyale/day-of-data-2.0/blob/master/5-Geospatial%20analysis/images/EE.png "Code Editor")
+![Code Editor](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/EE.png "Code Editor")
 
 ---
 
@@ -198,7 +209,7 @@ var var_MultiPolygon = ee.Geometry.MultiPolygon([ee.Geometry.Polygon([[0, 0], [6
 - Feature Collections are groups of features
 
 
-![Singapore map by GRC](https://github.com/datadrivenyale/day-of-data-2.0/blob/master/5-Geospatial%20analysis/images/GRC.png "Singapore Map by GRC")
+![Singapore map by GRC](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/GRC.png "Singapore Map by GRC")
 
 ---
 
