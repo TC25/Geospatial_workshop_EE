@@ -27,15 +27,6 @@
 <br><br><br><br><br><br><br>
 
 
-# What can you do with Google Earth Engine?
-
-### [EE Population Explorer](https://code.earthengine.google.com/f5c100f29958f6fe82ba5d0dcf6421a4 "EE Population Explorer")
-
-### [EE Ocean Time Series Investigator](https://code.earthengine.google.com/901e5a356ef3d260a5ff542598667044 "EE Ocean Time Series Investigator")
-
-### [Global Surface UHI Explorer](https://yceo.users.earthengine.app/view/uhimap "Global Surface UHI Explorer")
-
-
 
 # Agenda
 
@@ -53,6 +44,7 @@
 ##### Operations on Images
 ##### Operations on Image Collections
 ##### Importing and exporting Data
+##### Example Applications
 ##### Conclusion and resources
 
 ---
@@ -446,6 +438,17 @@ Export.image.toDrive({
 ```
 >or image.toCloudStorage, image.toAsset, table.toDrive, table.toCloudStorage, video.toCloudStorage, and video.toDrive
 
+---
+
+# Example Applications
+
+ What can you do with Google Earth Engine?
+
+### [EE Population Explorer](https://code.earthengine.google.com/f5c100f29958f6fe82ba5d0dcf6421a4 "EE Population Explorer")
+
+### [EE Ocean Time Series Investigator](https://code.earthengine.google.com/901e5a356ef3d260a5ff542598667044 "EE Ocean Time Series Investigator")
+
+### [Global Surface UHI Explorer](https://yceo.users.earthengine.app/view/uhimap "Global Surface UHI Explorer")
 ---
 
 # Conclusion and resource
