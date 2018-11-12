@@ -5,7 +5,7 @@
 
 <p align="center"> <b>TC Chakraborty</b>   </p>
 
-<p align="center"> <b>and</b>   </p>
+<p align="center"> <b>&</b>   </p>
 
 <p align="center"> <b>Sabrina Szeto</b>   </p>
 
