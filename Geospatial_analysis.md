@@ -459,7 +459,7 @@ Export.image.toDrive({
 
 ### [Global Surface UHI Explorer](https://yceo.users.earthengine.app/view/uhimap "Global Surface UHI Explorer")
 
-### [Stratifi - cloud-based stratification](https://sabrinaszeto.users.earthengine.app/view/stratifi, "Stratifi - cloud-based stratification")
+### [Stratifi - cloud-based stratification](https://sabrinaszeto.users.earthengine.app/view/stratifi "Stratifi - cloud-based stratification")
 ---
 
 # Resources
