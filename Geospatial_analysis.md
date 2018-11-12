@@ -430,7 +430,14 @@ var mosaicofimages = var_ImCollection.mosaic();
 
 [Image to table example](https://code.earthengine.google.com/31ca9a8d6ba853db8a74fbdb214626f5 "Image to table example")
 
-[Timelapse example](https://code.earthengine.google.com/f4d1d6c097ee6274897643defd69f814 "Timelapse example")
+[Timelapse example](https://code.earthengine.google.com/84883a0dc4be89994dfaad4c8af2b02a "Timelapse example")
+
+![Dubai timelapse](https://github.com/TC25/Geospatial_workshop_EE/blob/master/Dubai_timelapse.mp4 "Dubai timelapse")
+
+![Urban growth in Dubai](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/Dubai_change "Dubai Change")
+
+
+
 ### Export image, video or table to Google Drive, Asset, or Google Cloud
 
 ```javascript
