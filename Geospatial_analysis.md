@@ -23,6 +23,8 @@
 
 <p align="center"> https://github.com/TC25/Geospatial_workshop_EE </p>
 
+<p align="center"> https://signup.earthengine.google.com </p>
+
 ---
 <br><br><br><br><br><br><br>
 
