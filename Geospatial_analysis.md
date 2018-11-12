@@ -5,9 +5,9 @@
 
 <p align="center"> <b>TC Chakraborty</b>   </p>
 
-<p align="center"> <b>PhD candidate</b>   </p>
+<p align="center"> <b>and</b>   </p>
 
-<p align="center"> <b>Yale School of Forestry & Environmental Studies</b>   </p>
+<p align="center"> <b>Sabrina Szeto</b>   </p>
 
 
 
@@ -81,6 +81,8 @@ Collection, visualization, and analysis of geographical or spatial data.
 ---
 
 # Google Earth Engine platform
+
+[Introductory video](https://www.youtube.com/watch?v=gKGOeTFHnKY&feature=youtu.be, "Video")
 
 [Code Editor](https://code.earthengine.google.com/ "Earth Engine Code Editor")
 
@@ -201,7 +203,7 @@ var var_MultiPolygon = ee.Geometry.MultiPolygon([ee.Geometry.Polygon([[0, 0], [6
 - Feature Collections are groups of features
 
 
-![Singapore map by GRC](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/GRC.png "Singapore Map by GRC")
+![Chicago map by neighborhood](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/GRC.png "Chicago Map by neighborhood")
 
 ---
 
@@ -226,7 +228,7 @@ var result = Input.map(function_Name);
 
 # Operations on Geometries
 
-[Geometry operations](https://code.earthengine.google.com/d5d2db5aa4bea6bd94355a39e1f42a3f "EE Geometry operations")
+[Geometry operations](https://code.earthengine.google.com/2f8ac6fe92f8fa7aff23eedb087c7d12 "EE Geometry operations")
 
 ### Find area of geometry
 ```javascript
@@ -351,7 +353,7 @@ var inverseFilter = ee.Filter.not(filter);
 ---
 # Operations on Images
 
-[Image operations](https://code.earthengine.google.com/54c72f1d74cb42e7ed1245f1511562bb "EE Image operations")
+[Image operations](https://code.earthengine.google.com/80b0d4a6ff3892d3f13bd99c3e88bc4f "EE Image operations")
 
 ### Selecting the bands of an image 
 ```javascript
@@ -426,9 +428,9 @@ var mosaicofimages = var_ImCollection.mosaic();
 ---
 # Importing and exporting data
 
-[Image to table example](https://code.earthengine.google.com/7ba00e4d20acfdb3973bb0263757ecd7 "Image to table example")
+[Image to table example](https://code.earthengine.google.com/31ca9a8d6ba853db8a74fbdb214626f5 "Image to table example")
 
-[Timelapse example](https://code.earthengine.google.com/3f9c9d57c08ac12f60d0f9f213a0d359 "Timelapse example")
+[Timelapse example](https://code.earthengine.google.com/f4d1d6c097ee6274897643defd69f814 "Timelapse example")
 ### Export image, video or table to Google Drive, Asset, or Google Cloud
 
 ```javascript
