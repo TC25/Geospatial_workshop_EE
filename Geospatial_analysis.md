@@ -45,7 +45,7 @@
 ##### Operations on Image Collections
 ##### Importing and exporting Data
 ##### Example Applications
-##### Conclusion and resources
+##### Resources
 
 ---
 
@@ -451,14 +451,15 @@ Export.image.toDrive({
 ### [EE Ocean Time Series Investigator](https://code.earthengine.google.com/901e5a356ef3d260a5ff542598667044 "EE Ocean Time Series Investigator")
 
 ### [Global Surface UHI Explorer](https://yceo.users.earthengine.app/view/uhimap "Global Surface UHI Explorer")
+
+### [Stratifi - cloud-based stratification](https://sabrinaszeto.users.earthengine.app/view/stratifi, "Stratifi - cloud-based stratification")
 ---
 
-# Conclusion and resource
+# Resources
 
-[Night Lights example](https://code.earthengine.google.com/2859884e8ea9b116c2ae24c3f95ec8cb "Night Lights example") 
-- Adapted from Prof. Dana Tomlin's notes
 
-### Resources
+[Geospatial Software Design](https://environment.yale.edu/courses/2018-2019/detail/754/ "Geospatial Software Design")
+
 [Google Earth Engine API documentation](https://developers.google.com/earth-engine/ "Google Earth Engine API documentation")
 
 [Google Earth Engine Developers forum](https://groups.google.com/forum/#!forum/google-earth-engine-developers "Google Earth Engine Developers forum")
@@ -466,3 +467,4 @@ Export.image.toDrive({
 [Example scripts from Prof. Dana Tomlin's handouts for his course on Geospatial Software Design](https://github.com/EEYale/example-scripts "Example scripts from Prof. Dana Tomlin's handouts for his course on Geospatial Software Design")
 
 - tc.chakraborty@yale.edu
+- sabrina.szeto@yale.edu
