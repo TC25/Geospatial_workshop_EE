@@ -355,7 +355,7 @@ var inverseFilter = ee.Filter.not(filter);
 ---
 # Operations on Images
 
-[Image operations](https://code.earthengine.google.com/5d45f24e8023dad12ae8f3c838b66488 "EE Image operations")
+[Image operations](https://code.earthengine.google.com/b2ddaa87c13ec42b7c122eab8310a611 "EE Image operations")
 
 ### Selecting the bands of an image 
 ```javascript
