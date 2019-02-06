@@ -95,7 +95,7 @@ Source: Google Earth Engine User summit
 
 ---
 
-![Code Editor](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/EE.png "Code Editor")
+![Code Editor](https://github.com/TC25/Geospatial_workshop_EE/blob/master/images/EE_v2.png "Code Editor (Source: developers.google.com)")
 
 ---
 
