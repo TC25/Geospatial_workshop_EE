@@ -21,7 +21,7 @@ First, load the feature collection of Chicago's census tracts from user assets a
 //*******This script should be run on the Google Earth Engine Javascript API (https://earthengine.google.com/)*********//
 
 var ROI = ee.FeatureCollection('users/tirthankar25/chicago')
-var Water = ee.Image("JRC/GSW1_0/GlobalSurfaceWater").select("occurrence");
+var Water = ee.Image("JRC/GSW1_4/GlobalSurfaceWater").select("occurrence");
 
 print(ROI)
 Map.addLayer(ROI, {}, "Chicago Shapefile") 
@@ -32,7 +32,7 @@ Map.setCenter(-87.679, 41.847, 10)
 #### Load the MODIS image collection and filter it for NDVI data.
 
 ```javascript
-var MODIS = ee.ImageCollection('MODIS/006/MOD13A1');
+var MODIS = ee.ImageCollection('MODIS/061/MOD13A1');
 print(MODIS)
 
 var SumFilter = ee.Filter.dayOfYear(152, 273);
@@ -74,7 +74,7 @@ Export.table.toDrive({ collection: Reduced, description: 'Chicago_censustracts',
 #### Load the MODIS tree cover data for the years 2001 and 2015.
 
 ```javascript
-var MODIS = ee.ImageCollection('MODIS/006/MOD44B');
+var MODIS = ee.ImageCollection("MODIS/061/MOD44B");
 var TREE = MODIS.select('Percent_Tree_Cover')
 
 var TREE_2001 = TREE.filterDate('2001-01-01', '2001-12-31').mean()
