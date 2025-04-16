@@ -1,16 +1,12 @@
----
-title: Vegetation change analysis: from local to global
-description: This lab exercise will introduce application of the Google Earth Engine platform for change detection from local to global scale.
-author: TC Chakraborty
----
+
 
 # Vegetation Change Analysis: From Local to Global
 
-In this tutorial, we will walk you through a global to local analysis of vegetation change using Google Earth Engine (GEE). This tutorial is based on the scripts provided by TC Chakraborty. 
+In this tutorial, we will walk you through a global to local analysis of vegetation change using Google Earth Engine (GEE).
 
 ## Introduction
 
-Understanding vegetation change over time helps in monitoring ecological health, planning land use, and managing natural resources. This tutorial will introduce you to the steps required to analyze and visualize vegetation change using satellite data in GEE.
+Understanding vegetation change over time helps in monitoring ecological health, land use planning, and managing natural resources. This tutorial will introduce you to the steps required to analyze and visualize vegetation change using satellite data in GEE. A focus will be on exploring how easy it is scale your workflow to perform planetary-scale analysis using the platform.
 
 ## Local Analysis: Chicago
 
