@@ -1,16 +1,16 @@
 
 
-# Vegetation Change Analysis: From Local to Global
+# Vegetation and Vegetation Change Analysis: From Local to Global
 
 In this tutorial, we will walk you through a global to local analysis of vegetation change using Google Earth Engine (GEE).
 
 ## Introduction
 
-Understanding vegetation change over time helps in monitoring ecological health, land use planning, and managing natural resources. This tutorial will introduce you to the steps required to analyze and visualize vegetation change using satellite data in GEE. A focus will be on exploring how easy it is scale your workflow to perform planetary-scale analysis using the platform.
+Understanding vegetation and its change over time helps in monitoring ecological health, land use planning, and managing natural resources. This tutorial will introduce you to the steps required to analyze and visualize vegetation and vegetation change using satellite data in GEE. A focus will be on exploring how easy it is scale your workflow to perform planetary-scale analysis using the platform.
 
 ## Local Analysis: Chicago
 
-This section covers the analysis of vegetation change using the Normalized Difference Vegetation Index (NDVI) in Chicago.
+This section covers the analysis of vegetation using the Normalized Difference Vegetation Index (NDVI) in Chicago.
 
 ### Loading Data
 
@@ -42,6 +42,7 @@ var NDVI_dateofint = NDVI.filterDate('2014-01-01', '2018-12-30').filter(SumFilte
 var NDVI_mean = NDVI_dateofint.mean()
 var NDVI_final = NDVI_mean.multiply(.0001)
 var NDVI_Chicago = NDVI_final.clip(ROI).updateMask(Water.mask().not())
+Map.addLayer(NDVI_Chicago, {min:.2, max:.6, palette:['#8c510a','#d8b365','#f6e8c3','#f5f5f5','#c7eae5','#5ab4ac','#01665e'].reverse()},"Pixelwise NDVI")
 ```
 
 ### Reducing Data by Region
@@ -58,6 +59,7 @@ print(Reduced)
 
 var NDVI_MODIS = Reduced.reduceToImage({ properties: ee.List(['NDVI']), reducer: ee.Reducer.first() })
 print(NDVI_MODIS)
+Map.addLayer(NDVI_MODIS, {min:.2, max:.6, palette:['#8c510a','#d8b365','#f6e8c3','#f5f5f5','#c7eae5','#5ab4ac','#01665e'].reverse()},"Aggregated NDVI")
 ```
 
 ### Export Data
@@ -82,16 +84,22 @@ var TREE_2015 = TREE.filterDate('2015-01-01', '2015-12-31').mean()
 ```
 
 ### Calculating Change
-#### Compute the change in tree cover between 2001 and 2015.
+#### Compute the change in tree cover between 2001 and 2015 on a continuous scale.
 
 ```javascript
 var TREE_change = TREE_2015.subtract(TREE_2001);
+Map.addLayer(TREE_change,{min:-10, max:10, palette:['#8c510a',"white", '#01665e']})
+```
 
+#### Compute the direction of change in tree cover between 2001 and 2015.
+
+```javascript
 var TREE_increase = TREE_change.remap({ from: ee.List([-999]), to: ee.List([-999]), defaultValue: 1 }).mask(TREE_change.gt(0))
 var TREE_same = TREE_change.remap({ from: ee.List([-999]), to: ee.List([-999]), defaultValue: 0 }).mask(TREE_change.eq(0))
 var TREE_decrease = TREE_change.remap({ from: ee.List([-999]), to: ee.List([-999]), defaultValue: -1 }).mask(TREE_change.lt(0))
 
 var TREE_FINAL = ee.ImageCollection([TREE_increase.float(), TREE_same.float(), TREE_decrease.float()]).mosaic()
+Map.addLayer(TREE_FINAL,{min:-1, max:1, palette:['#8c510a',"white", '#01665e']})
 ```
 
 ### Exporting Data
@@ -104,4 +112,9 @@ var ROI = ee.Geometry(ROI, null, false);
 Export.image.toDrive({ image: TREE_FINAL, description: 'TREE_FINAL_image', folder: 'OEFS', region: ROI, scale: 250 })
 ```
 
-Now you have a complete tutorial on analyzing vegetation change from a local (Chicago) to a global scale using the Google Earth Engine. Happy analyzing!
+Now you have a complete tutorial on analyzing vegetation and vegetation change from a local (Chicago) to a global scale using the Google Earth Engine. Happy analyzing!
+
+# Other exercises
+Some opportunities for further exploration and analysis:
+1. Try doing a similar analysis for your region or city of interest by ingesting your own shapefile.
+2. Consider changes in other variables, either over your region of interest, or globally. How about Land Surface Temperature or Aerosol Optical Depth or impervious land?
