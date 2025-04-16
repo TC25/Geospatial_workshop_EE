@@ -32,8 +32,8 @@ Map.addLayer(ROI, {}, "Chicago Shapefile")
 Map.setCenter(-87.679, 41.847, 10)
 ```
 
-###Working with MODIS Data
-####Load the MODIS image collection and filter it for NDVI data.
+### Working with MODIS Data
+#### Load the MODIS image collection and filter it for NDVI data.
 
 ```javascript
 var MODIS = ee.ImageCollection('MODIS/006/MOD13A1');
@@ -48,8 +48,8 @@ var NDVI_final = NDVI_mean.multiply(.0001)
 var NDVI_Chicago = NDVI_final.clip(ROI).updateMask(Water.mask().not())
 ```
 
-###Reducing Data by Region
-####Calculate spatial mean NDVI values for each census tract.
+### Reducing Data by Region
+#### Calculate spatial mean NDVI values for each census tract.
 
 ```javascript
 function Neighborhood_mean(feature) {
@@ -64,18 +64,18 @@ var NDVI_MODIS = Reduced.reduceToImage({ properties: ee.List(['NDVI']), reducer:
 print(NDVI_MODIS)
 ```
 
-Export Data
-Export the data as images or tables for further analysis.
+### Export Data
+#### Export the data as images or tables for further analysis.
 
 ```javascript
 Export.image.toDrive({ image: NDVI_MODIS, description: 'Chicago_NDVI', folder: 'Workshop', region: ROI.geometry().bounds(), scale: 500 })
 Export.table.toDrive({ collection: Reduced, description: 'Chicago_censustracts', folder: 'Workshop', fileFormat: 'CSV' })
 ```
 
-##Global Analysis: Tree Cover Change
-###Now, let's analyze global tree cover change between 2001 and 2015.
-###Loading Data
-####Load the MODIS tree cover data for the years 2001 and 2015.
+## Global Analysis: Tree Cover Change
+### Now, let's analyze global tree cover change between 2001 and 2015.
+### Loading Data
+#### Load the MODIS tree cover data for the years 2001 and 2015.
 
 ```javascript
 var MODIS = ee.ImageCollection('MODIS/006/MOD44B');
@@ -85,8 +85,8 @@ var TREE_2001 = TREE.filterDate('2001-01-01', '2001-12-31').mean()
 var TREE_2015 = TREE.filterDate('2015-01-01', '2015-12-31').mean()
 ```
 
-###Calculating Change
-####Compute the change in tree cover between 2001 and 2015.
+### Calculating Change
+#### Compute the change in tree cover between 2001 and 2015.
 
 ```javascript
 var TREE_change = TREE_2015.subtract(TREE_2001);
@@ -98,8 +98,8 @@ var TREE_decrease = TREE_change.remap({ from: ee.List([-999]), to: ee.List([-999
 var TREE_FINAL = ee.ImageCollection([TREE_increase.float(), TREE_same.float(), TREE_decrease.float()]).mosaic()
 ```
 
-###Exporting Data
-####Export the final tree cover change map.
+### Exporting Data
+#### Export the final tree cover change map.
 
 ```javascript
 var ROI = ee.Geometry.Rectangle(-180, -90, 180, 90);
