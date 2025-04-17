@@ -6,7 +6,7 @@ In this tutorial, we will walk you through a global to local analysis of vegetat
 
 ## Introduction
 
-Understanding vegetation and its change over time helps in monitoring ecological health, land use planning, and managing natural resources. This tutorial will introduce you to the steps required to analyze and visualize vegetation and vegetation change using satellite data in GEE. A focus will be on exploring how easy it is scale your workflow to perform planetary-scale analysis using the platform.
+Understanding vegetation and its change over time helps in monitoring ecological health, land use planning, and managing natural resources. This tutorial will introduce you to the steps required to analyze and visualize vegetation and vegetation change using satellite data in GEE. A focus will be on exploring how easy it is to scale your workflow to perform planetary-scale analysis using the platform.
 
 ## Local Analysis: Chicago
 
@@ -14,7 +14,7 @@ This section covers the analysis of vegetation using the Normalized Difference V
 
 ### Loading Data
 
-First, load the feature collection of Chicago's census tracts from user assets and add a water mask.
+First, load the feature collection of Chicago's census tracts from user assets while adding a water mask to exclude water-covered areas.
 
 ```javascript
 
@@ -35,7 +35,7 @@ The feature collection has been added to the map and can be interacted with usin
 
 Here, we will use a day of year filter to only consider the images for northern hemisphere summer and limit our overall analysis to the years 2014 to 2018 (both inclusive).
 
-To convert the digital number in the derived produce to NDVI, we are multiplying by the scaling factor.
+To convert the digital number in the derived product to NDVI, we are multiplying by the scaling factor.
 
 ```javascript
 var MODIS = ee.ImageCollection('MODIS/061/MOD13A1');
@@ -57,7 +57,7 @@ The processed NDVI image is added to the map, and you can clearly see the spatia
 ### Reducing Data by Region
 #### Calculate spatial mean NDVI values for each census tract.
 
-Here, we will focus on estimating the mean NDVI of each census tract instead of using the pixel-level data. This will be done through a function that can be mapped over the Chicago feature collection. The reduceregion operation within the function ouputs the mean NDVI within the feature (specified through the reduce argument to the operation), and this mean NDVI is added as a new property to the feature.
+Here, we will focus on estimating the mean NDVI of each census tract instead of using the pixel-level data. This will be done through a function that can be mapped over the Chicago feature collection. The reduceRegion operation within the function outputs the mean NDVI within the feature (specified through the reducer argument to the operation), and this mean NDVI is added as a new property to the feature.
 
 ```javascript
 function Neighborhood_mean(feature) {
@@ -90,7 +90,7 @@ Export.table.toDrive({ collection: Reduced, description: 'Chicago_censustracts',
 ## Global Analysis: Tree Cover Change
 ### Now, let's analyze global tree cover change between 2001 and 2015.
 
-Now, let us scale our analysis globally and focus on the change in vegetation between 2001 and 2015.
+Basically, we will scale our analysis globally and focus on the change in tree cover between 2001 and 2015.
 
 ### Loading Data
 #### Load the MODIS tree cover data for the years 2001 and 2015.
@@ -115,13 +115,13 @@ var TREE_change = TREE_2015.subtract(TREE_2001);
 Map.addLayer(TREE_change,{min:-10, max:10, palette:['#8c510a',"white", '#01665e']})
 ```
 
-When we add this change image to the map, we can see the pixel-level variavility, which includes a lot of noise at that scale.
+When we add this change image to the map, we can see the pixel-level variability, which includes a lot of noise at that scale.
 
 ![Tree change](Exercise4.png)
 
 #### Compute the direction of change in tree cover between 2001 and 2015.
 
-Instead of estimating the magnitude of change, let us try to only get the direction of change between the two years. For this, we remap the image using a mask for the tree change greater than 0, equal to 0, or less than 0. For pixels that remain after masking, a default value is given to represent an increase, no change, or a decrease.
+Instead of estimating the magnitude of change, let us try to only get the direction of change between the two years. For this, we remap the image using a mask for the tree change greater than 0, equal to 0, or less than 0. For pixels that remain after masking, a default value (1, 0, or -1) is assigned to represent an increase, no change, or a decrease.
 
 These three images are then mosaiced to form the overall change image for the world.
 
@@ -141,7 +141,7 @@ When we add this newly created image, the direction of change is more clearly vi
 ### Exporting Data
 #### Export the final tree cover change map.
 
-Similar to the local scale anaysis, we export the image for offline analysis. To do so globally, we first create a rectangular global region of interest.
+Similar to the local scale analysis, we export the image for offline analysis. To do so globally, we first create a rectangular global region of interest.
 
 ```javascript
 var ROI = ee.Geometry.Rectangle(-180, -90, 180, 90);
@@ -150,7 +150,7 @@ var ROI = ee.Geometry(ROI, null, false);
 Export.image.toDrive({ image: TREE_FINAL, description: 'TREE_FINAL_image', folder: 'OEFS', region: ROI, scale: 250 })
 ```
 
-The interesting part of this exercise is how easy to is to scale this analysis globally, something that would be quite storage and compute consuming in a desktop environment. Now that we are done with this exercise, we can consider extending this kind of analysis to other regions and variables. For instance, you can easily upload your own shapefile using GEE's asset upload feature and replace the path to the asset in the first (local NDVI analysis) example.
+The interesting part of this exercise is how easy it is to scale this analysis globally, something that would be quite storage and compute consuming in a desktop environment. Now that we are done with this exercise, we can consider extending this kind of analysis to other regions and variables. For instance, you can easily upload your own shapefile using GEE's asset upload feature and replace the path to the asset in the first (local NDVI analysis) example.
 
 ![Uploading shapefile](Exercise6.png)
 
