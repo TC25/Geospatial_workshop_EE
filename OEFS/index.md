@@ -1,4 +1,4 @@
-* Author: TC Chakraborty
+* Author: TC Chakraborty, Earth Scientist, Pacific Northwest National Laboratory
 * Last revised: 4/16/2025
 
 # Vegetation and Vegetation Change Analysis: From Local to Global
