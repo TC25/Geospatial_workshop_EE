@@ -1,4 +1,5 @@
-
+* Author: TC Chakraborty
+* Last revised: 4/16/2025
 
 # Vegetation and Vegetation Change Analysis: From Local to Global
 
